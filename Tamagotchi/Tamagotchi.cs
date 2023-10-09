@@ -21,7 +21,8 @@ public class Tamagotchi
         {
             hunger -= 2;
         }
-        Task.Delay(1000).Wait();
+        Console.WriteLine($"You fed {name}");
+        Task.Delay(2000).Wait();
         Console.Clear();
 
     }
@@ -38,17 +39,19 @@ public class Tamagotchi
         catch
         {
             Console.WriteLine($"\nNo words. Head empty. (Try teaching {name} something.)");
-            Task.Delay(1000).Wait();
+            Task.Delay(3000).Wait();
             Console.Clear();
         }
     }
 
     public void Teach()
     {
+        Console.WriteLine("Write a word to learn: ");
         string word = Console.ReadLine();
         words.Add(word);
+        Console.WriteLine($"{name} has learned: {word}");
         ReduceBoredom();
-        Task.Delay(1000).Wait();
+        Task.Delay(3000).Wait();
         Console.Clear();
     }
 
