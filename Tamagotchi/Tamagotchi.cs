@@ -46,7 +46,7 @@ public class Tamagotchi
 
     public void Teach()
     {
-        Console.WriteLine("Write a word to learn: ");
+        Console.WriteLine("Write something to learn: ");
         string word = Console.ReadLine();
         words.Add(word);
         Console.WriteLine($"{name} has learned: {word}");
